@@ -1,17 +1,20 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     background-color: #97cce0;
     
 }
 
 .grid-container {
   height: 100vh;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
+  outline: none;  
   display: grid;
   font: 18px;
   grid-template-rows: min-content;
@@ -19,7 +22,8 @@ body {
   padding: 0;  
 }
 .grid-item {
-  padding: .5%;
+  padding: 0;
+  margin: 0;
   text-align: center;
   /*border: 1px solid red;*/
 }
@@ -27,10 +31,12 @@ body {
   grid-area: 1 / 1 / 2 / 100;
   margin: 0;
   padding: 0;
+  
 }
 
 .Sidebar-left {
   grid-area: 2 / 1 / 90 / 5;
+  
 }
 .Main {
   grid-area: 2 / 5 / 90 / 95;
@@ -40,14 +46,19 @@ body {
 }
 .Footer {
   grid-area: 90 / 1 / 100 / 100;
+  padding: 5% 0 0 0;
+  margin: 0 0 -18px 0;
 }
 .navbar {
   display: flex;
-  height:50px;
+  /*height:50px;*/
   justify-content: space-between;
-  background-color: rgba(155, 70, 70, .8);  
-  padding: .7%;
+  align-items: center;
+  background-color:rgba(13, 13, 46, .76);  
+  padding: 0;
+  margin: 0;
 }
+/*
 .brand-title a {
   font-weight: bolder;
   font-size: 1.5 rem;
@@ -56,29 +67,46 @@ body {
   color: burlywood;
  
 }
+*/
+.brand-title {
+  padding: 0;
+  margin: 0;
+}
+.brand-title a {
+  margin: 0;
+  padding: 0;
+}
+.brand-title a img {
+  padding-left: 50px;
+  margin-top: 3.5px;
+}
 
 .toggle-button {
   height: 21px;
   width: 30px;
   background-color: transparent;
   position: absolute;
-  top: .90rem;
+  top: .80rem;
   right: 1rem;  
   flex-direction: column;
   justify-content: space-between;
   display: flex; 
   padding-bottom: 5px;
+  margin: 1% 1% 1% 2%;
   
 }
 .toggle-button:hover {
   cursor: pointer;
+  background-color: #97cce0;
+    
 }
 
 .toggle-button .bar {
   width: 100%;
   height: 3px;
-  background-color: rgba(58, 56, 56, 0.8);
+  background-color:aliceblue;
   border-radius: 10px;
+  margin-top: 3.5px;
   
 }
 
@@ -88,26 +116,44 @@ body {
 }
 .navbar-links ul li {
   list-style-type: none;
+  
 }
 .navbar-links ul li a {
   text-decoration: none;
   color: aliceblue;
   padding: 8px;
   display: block;
+  
 }
 .navbar-links ul li:hover {
-  background-color: rgba(155, 70, 70, 1);
+  background-color:  #97cce0;
+    
 }
-@media (max-width: 800px) {
+@media (max-width: 870px) {
+  .Header {
+    grid-area: 1 / 1 / 2 / 100;
+    margin-bottom: 4px;
+    padding: 0;
+    
+  }
   .navbar {
     height: 50px;
   }
+
+  
+/*
+  .brand-title a img {
+    padding-left: 50px;
+    margin-top: 3.5px;
+    margin-bottom: 10px;
+  }
+  */
   .toggle-button {
     display: flex;
   }
   .navbar-links {
     display: none;
-    width: 100%;
+    width: 100%;    
   }
   .navbar {
     flex-direction: column;
@@ -121,7 +167,401 @@ body {
     text-align: start;
   }
   .navbar-links.active {
-    display: flex;
+    display: flex;    
+  }
+  #contactme-border-bottom {
+    border-bottom: .1px solid rgba(13, 13, 46, .76);
+  }
+}
+/* Dropdown Menu */
+.navbar-links ul li ul {
+  position: absolute;
+  display: none;
+}
+.navbar-links ul li:hover ul {
+  display: block;
+  /*width: 100%;  just changed it to inherit */
+  width: inherit;  
+  padding-left: 0;
+  text-align: left;
+}
+.navbar-links ul li ul li {
+  background-color: rgba(13, 13, 46, .76);
+  justify-content: space-between;
+  width: inherit;
+  /*align-items: left;*/
+}
+.navbar-links ul li ul li a {
+  border: .1px solid rgba(13, 13, 46, .76);
+  word-break: inherit;
+}
+
+/* Footer css starts here */
+.footer-container .footer-row {
+  display: flex;
+}
+.footer-container .footer-row .column {
+  float: left;
+  padding: 3%;
+  background-color: rgba(13, 13, 46, .76);
+  color: aliceblue;
+  
+}
+.footer-container .footer-row .column-left {
+  width: 25%;
+  
+}
+.footer-container .footer-row .column-middle {
+  width: 50%;
+  
+}
+.footer-container .footer-row .column-right {
+  width: 25%;
+  
+}
+@media (max-width: 600px) {
+  .footer-container .footer-row {
+    display: block;
+  }
+  .footer-container .footer-row .column {
+    float: left;
+    padding: 2%;
+  }
+  .footer-container .footer-row .column-left {
+    width: 100%;
+    
+    
+  }
+  .footer-container .footer-row .column-middle {
+    width: 100%;
+    
+  }
+  .footer-container .footer-row .column-right {
+    width: 100%;
     
   }
 }
+
+
+/* Footer css ends here */
+.welcome {
+  margin: 10% 10% 0 10%;
+  padding: 5%;
+  width: 82%;
+  height: auto;
+  border: 10px solid rgba(13, 13, 46, .76);
+  border-radius: 20px;  
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%);
+  
+}
+.welcome h2 {
+  width: 50%;
+  padding: 3%;
+  margin: 0 25% 0 25%;
+  
+  
+  background-color: rosybrown;
+  
+  border: none;
+  border-radius: 50%;
+}
+
+.introduction {
+  margin: 5% 10% 0 10%;
+  padding: 5%;
+  width: 82%;
+  height: auto;
+  border: 10px solid rgba(13, 13, 46, .76);
+  border-radius: 20px;  
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%)
+}
+/* two equal columns strt*/
+.introduction .row-introduction {
+  display: flex;
+}
+.introduction .row-introduction .column {
+  float: left;   
+}
+.introduction .row-introduction .column-left {
+  width: 50%;
+  padding: 0;
+  
+  
+}
+
+.introduction .row-introduction .column-right {
+  width: 50%;
+  padding: 5%;  
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(243, 92, 92);
+
+}
+
+/* two equal columns end*/
+/* @media for the above equal columns starts*/
+/* Need to work on that part.....bro.....
+@media (max-width: 870px) {  
+  .introduction .row-introduction .column-right {
+    padding: 10% 10% 10% 10%;    
+  }
+  @media (max-width: 770px) {  
+    .introduction .row-introduction .column-right {
+      padding: 15% 10% 10% 10%;    
+    }
+}
+*/
+/* @media for the above equal columns ends*/
+.row-introduction .column-left h2 {
+  font-style: italic;
+  text-align: left;
+}
+.row-introduction .column-left h2 i {
+  color: rgb(243, 92, 92);
+}
+
+
+/* Again two equal columns strt*/
+.introduction .row-introduction-2 {
+  display: flex;    
+}
+.introduction .row-introduction-2 h2 {
+  text-align: center;
+}
+.introduction .row-introduction-2 .column {
+  float: left;
+  width: 50%;  
+}
+
+.introduction .row-introduction-2 .column-left {
+  float: left;
+  width: 50%; 
+    
+}
+.introduction .row-introduction-2 .column-right {
+  float: left;
+  width: 50%;   
+}
+@media (max-width: 850px) {
+  .introduction .row-introduction-2 .column-left {
+    float: left;
+    width: 100%;
+  }
+  .introduction .row-introduction-2 .column-right {
+    float: left;
+    width: 100%;
+  }
+}
+
+/* Again two equal columns end*/
+.introduction .row-introduction-2 .column-left p {
+  text-align: left;
+}
+
+
+
+
+/*logodesign starts */
+.logo-container {
+  background-color: whitesmoke;
+  border: 5px solid rgba(13, 13, 46, .76);
+  border-radius: 10px;
+  width: 20%;
+  height: auto;
+  padding: 0;
+  margin: 1% 0 1% 3%;
+}
+.logo-container .row {
+  display: flex;  
+  height: auto; 
+  padding: 0; 
+  margin: 0;
+}
+
+.logo-container .row .column-left {  
+  width: 35%;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  
+}
+.logo-container .row .column-right {
+  width: 65%;
+  background-color:transparent;
+  color: rgba(13, 13, 46, .76);
+  padding: 3%;
+}
+
+
+.logo-container .row .column-left .logo-monitor {
+  width: 70px;
+  padding: 6%;  
+  background-color: transparent;
+  border: 5px solid #97cce0;
+  border-radius: 5px;
+  margin: 5% 0 3% 5%;
+  
+}
+.logo-container .row .column-left .logo-keyboard {
+  width: 70px;
+  background-color:  #97cce0;
+  padding: 3%;  
+  border-radius: 5px;
+  margin: 0 0 5% 5%;
+}
+
+.logo-container .row .column-right .span-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;  
+}
+
+@media (max-width: 1050px) {
+  .logo-container {    
+    width: 22%;
+    height: auto;
+    padding: 0;
+    margin: 1% 0 1% 3%;
+  }
+}
+@media (max-width: 1000px) {
+  .logo-container {    
+    width: 24%;
+    height: auto;
+    padding: 0;
+    margin: 1% 0 1% 3%;
+  }
+}
+  @media (max-width: 950px) {
+    .logo-container {    
+      width: 26%;
+      height: auto;
+      padding: 0;
+      margin: 1% 0 1% 3%;
+    }
+  }
+   @media (max-width: 900px) {
+      .logo-container {    
+        width: 28%;
+        height: auto;
+        padding: 0;
+        margin: 1% 0 1% 3%;
+      }
+   }  
+      @media (max-width: 850px) {
+        .logo-container {    
+          width: 30%;
+          height: auto;
+          padding: 0;
+          margin: 1% 0 1% 3%;
+        }
+      }
+        @media (max-width: 800px) {
+          .logo-container {    
+            width: 32%;
+            height: auto;
+            padding: 0;
+            margin: 1% 0 1% 3%;
+          }
+        }
+          @media (max-width: 750px) {
+            .logo-container {    
+              width: 35%;
+              height: auto;
+              padding: 0;
+              margin: 1% 0 1% 3%;
+            }
+          }
+            
+            @media (max-width: 700px) {
+              .logo-container {    
+                width: 38%;
+                height: auto;
+                padding: 0;
+                margin: 1% 0 1% 3%;
+              }
+            }
+              @media (max-width: 650px) {
+                .logo-container {    
+                  width: 41%;
+                  height: auto;
+                  padding: 0;
+                  margin: 1% 0 1% 3%;
+                }
+              }
+
+                @media (max-width: 600px) {
+                  .logo-container {    
+                    width: 44%;
+                    height: auto;
+                    padding: 0;
+                    margin: 1% 0 1% 3%;
+                  }
+                }
+                  @media (max-width: 550px) {
+                    .logo-container {    
+                      width: 47%;
+                      height: auto;
+                      padding: 0;
+                      margin: 1% 0 1% 3%;
+                    }
+                  }
+                    @media (max-width: 500px) {
+                      .logo-container {    
+                        width: 50%;
+                        height: auto;
+                        padding: 0;
+                        margin: 1% 0 1% 3%;
+                      }
+                    }
+                      @media (max-width: 450px) {
+                        .logo-container {    
+                          width: 53%;
+                          height: auto;
+                          padding: 0;
+                          margin: 1% 0 1% 3%;
+                        }
+                      }
+                        @media (max-width: 400px) {
+                          .logo-container {    
+                            width: 56%;
+                            height: auto;
+                            padding: 0;
+                            margin: 1% 0 1% 3%;
+                          }
+                        }
+                          @media (max-width: 350px) {
+                            .logo-container {    
+                              width: 59%;
+                              height: auto;
+                              padding: 0;
+                              margin: 1% 0 1% 3%;
+                            }
+                          }
+                            @media (max-width: 300px) {
+                              .logo-container {    
+                                width: 61%;
+                                height: auto;
+                                padding: 0;
+                                margin: 1% 0 1% 3%;
+                              }
+                            }
+                              @media (max-width: 250px) {
+                                .logo-container {    
+                                  width: 64%;
+                                  height: auto;
+                                  padding: 0;
+                                  margin: 1% 0 1% 3%;
+                                }
+                              }
+                                @media (max-width: 200px) {
+                                  .logo-container {    
+                                    width: 67%;
+                                    height: auto;
+                                    padding: 0;
+                                    margin: 1% 0 1% 3%;
+                                  }
+                                }
+                
