@@ -49,6 +49,7 @@ body {
   padding: 5% 0 0 0;
   margin: 0 0 -18px 0;
 }
+
 .navbar {
   display: flex;
   /*height:50px;*/
@@ -212,8 +213,7 @@ body {
   
 }
 .footer-container .footer-row .column-middle {
-  width: 50%;
-  
+  width: 50%;  
 }
 .footer-container .footer-row .column-right {
   width: 25%;
@@ -242,6 +242,69 @@ body {
   }
 }
 
+.footer-container .footer-row .column-middle button {
+  width: 50%;
+  background-color: #97cce0;
+  border: rgba(13, 13, 46, .76);
+  border-radius: 5px;
+  padding: 2%;
+  color: rgba(13, 13, 46, .76);
+  font-weight: bold;
+}
+.footer-container .footer-row .column-middle button:hover {
+  cursor: pointer;
+}
+.footer-container .footer-row .column-right .row {
+  display: flex;
+  float: left;
+}
+.footer-container .footer-row .column-right .row .social-media-btn {
+  border: 1px solid rgba(13, 13, 46, .76); 
+  
+}
+.footer-container .footer-row .column-right .row .facebook-btn {
+  width: 25%;
+  margin: 2% 20% 2% 0;
+}
+.footer-container .footer-row .column-right .row .twitter-btn {
+  width: 50%;
+  margin: 2% 20% 2% 20%;
+}
+.footer-container .footer-row .column-right .row .instagram-btn {
+  width: 25%;
+  margin: 2% 0 2% 20%;
+}
+@media(max-width: 600px) {
+  .footer-container .footer-row .column-right .row .social-media-btn {
+    margin: 50%;
+    
+  }
+}
+.footer-container .footer-row .column-right .row .facebook-btn img {
+  width: 30px;
+  height:37px;
+  background-color: transparent;
+}
+.footer-container .footer-row .column-right .row .twitter-btn img {
+  width: 30px;
+  height:37px;
+  background-color: transparent;
+}
+.footer-container .footer-row .column-right .row .instagram-btn img {
+  width: 30px;
+  height:37px;
+  background-color: transparent;
+}
+#up-arrow-1 {
+  float: left;
+  padding: 2% 0 2% 10%;
+  color: rgba(13, 13, 46, .76);
+}
+#up-arrow-2 {
+  float: right;
+  padding: 2% 10% 2% 0;
+  color: rgba(13, 13, 46, .76);
+}
 
 /* Footer css ends here */
 .welcome {
@@ -252,8 +315,9 @@ body {
   border: 10px solid rgba(13, 13, 46, .76);
   border-radius: 20px;  
   background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%);
-  
+  color: rgba(13, 13, 46, .76);
 }
+
 .welcome h2 {
   width: 50%;
   padding: 3%;
@@ -273,7 +337,59 @@ body {
   height: auto;
   border: 10px solid rgba(13, 13, 46, .76);
   border-radius: 20px;  
-  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%)
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%);
+  color: rgba(13, 13, 46, .76);
+}
+
+.contact {
+  margin: 5% 10% 10% 10%;
+  padding: 5%;
+  width: 82%;
+  height: auto;
+  border: 10px solid rgba(13, 13, 46, .76);
+  border-radius: 20px;  
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(120, 168, 182) 100%);
+  color: rgba(13, 13, 46, .76);
+}
+.contact form input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid rgba(13, 13, 46, .76);
+  border-radius: 7px;
+  padding: 1%;
+}
+.contact form textarea {
+  width: 100%;
+  min-width: 100%;
+  min-height: 20px;
+  background-color: transparent;
+  border: 2px solid rgba(13, 13, 46, .76);
+  border-radius: 7px;
+  padding: 1%;
+}
+.contact button{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 13, 46, .76);
+  color: whitesmoke;
+  border: none;
+  border-radius: 7px;
+  padding: 1%;
+}
+.contact button:hover {
+  cursor: pointer;
+}
+
+.address .row {
+  display: flex;
+}
+.address .row .column {
+  width: 50%;
+  text-align: left;
+}
+.address .row .column-right a {
+  text-decoration: none;
+  color: red;
 }
 /* two equal columns strt*/
 .introduction .row-introduction {
@@ -319,7 +435,10 @@ body {
 .row-introduction .column-left h2 i {
   color: rgb(243, 92, 92);
 }
-
+.introduction strong a {
+  text-decoration: none;
+  color: red;
+}
 
 /* Again two equal columns strt*/
 .introduction .row-introduction-2 {
@@ -330,11 +449,13 @@ body {
 }
 .introduction .row-introduction-2 .column {
   float: left;
+  text-align: left;
   width: 50%;  
 }
 
 .introduction .row-introduction-2 .column-left {
   float: left;
+  text-align: left;
   width: 50%; 
     
 }
@@ -564,4 +685,41 @@ body {
                                     margin: 1% 0 1% 3%;
                                   }
                                 }
-                
+
+/* my services strts*/
+.web-development .web-development-row  {
+  display: flex;
+}
+.web-development .web-development-row .column {
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+.web-development .web-development-row .column ul li {
+  list-style: none;
+}
+.web-development .web-development-row .column ul li a {
+  text-decoration: none;
+  font-weight: bold;  
+  color: red; 
+
+}
+/* my services ends*/
+/* Templates css strts*/
+.templates h1 {
+  color: rgba(13, 13, 46, .76);
+}
+.templates button{
+  width: 100%;
+  background-color: rgba(13, 13, 46, .76);
+  color: whitesmoke;
+  border: none;
+  border-radius: 7px;
+  padding: 1%;
+}
+.templates button:hover {
+  cursor: pointer;
+}
+
+/* Templates css ends*/
+       

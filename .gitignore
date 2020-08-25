@@ -1,0 +1,4 @@
+.env
+modules
+node_modules
+routes

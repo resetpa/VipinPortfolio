@@ -11,6 +11,11 @@ toggleButton.addEventListener('click', ()=> {
 
 // adjusting navbar height to auto when toggle button is pressed
 
-
-
 //javascript for responsive navbar ends
+
+//footer javascript Top to page
+
+function goToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

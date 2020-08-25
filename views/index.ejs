@@ -1,8 +1,13 @@
    <%- include('header')  %> 
       <div class="grid-item Sidebar-left">
         
-      </div>   
+      </div>
+
       <div class="grid-item Main">
+        <br/> <br/>                
+          <% if(msg != ''){ %> 
+            <p style="color: red;"><%= msg %> </p>
+          <% } %>           
         <div class="container welcome">
           <h1>Vipin Kumar</h1>
           <br/>
@@ -13,28 +18,39 @@
           <hr/>
 
           <br/><br/>
-          <h3>Please Note:</h3>
-          <h3 style="color: red;">
-            This website is under process right now. <br/>
-            You will only be able to access to Home page of this website for now. <br/>
-            The complete website will be available soon to your services. <br/>
-            Regards.
+          
+          <h3 style="color: red; text-align: left; padding-left: 4%;" >
+            <strong style="color: rgba(13, 13, 46, .76);">Please Note: </strong><br/>
+            <ul>
+              <li>
+                This Website is under process right now.
+              </li>
+              <li>
+                You will only be able to access to Home page of this website for now.
+              </li>
+              <li>
+                The complete website will be available soon to your services.<br/><br/>
+                Regards
+              </li>
+            </ul>            
           </h3>
 
         </div>
         
         <br/><br/>
-        <div class="container introduction">
+        <div class="container introduction">          
+          <h1>About Me</h1>
+          <br/><br/>
           <div class=" row row-introduction">
             <div class="column column-left">             
               <h2>                
                 Hey there,
                 <br/><br/>
-                    I am <i>Vipin Kumar</i> ,
+                    I am <b><i>Vipin Kumar,</i></b> 
                 <br/><br/>
                 And 
                 <br/><br/>
-                I am a <i>Web-Developer.</i> 
+                I am a <b><i>Web-Developer.</i></b>
               </h2>
             
             </div>            
@@ -47,17 +63,71 @@
             <br/>                    
           <div class="row row-introduction-2">           
             <div class="column column-left">
-              <p>
-                Hey, I create Websites for small Business owners. Usually I deal with front end, but I work on backend as well.
-              </p>
+              <ul>
+                <li>Creating <b><i>Websites</i></b> for <b><i>Small Businesses</i></b></li>
+                <li>Creating <b><i>Static Websites</i></b></li> 
+              </ul>
             </div>
             <div class="column column-right">
-
-              column right
-
-
+              <ul>               
+                <li>Creating <b><i>Dinamic Websites</i></b></li> 
+                <li><b><i>Maintaining</i></b> and <b><i>Repairing Websites</i></b></li>
+              </ul>
             </div>
           </div>
+          <br/><br/>
+          <strong>Please check <a href="/myservices"><b><i>My Services</i></b></a> or <a href="/templates"><b><i>Templates</i></b></a> to get the type of Website you would like to get built</strong>
+        </div>
+
+        <!--Contact strts here-->
+        <div class="container contact">
+          <h1>Contact</h1>
+
+          <br/><br/>          
+          <% if(msg != ''){ %> 
+            <p style="color: red;"><%= msg %> </p>
+          <% } %> 
+          <br/><br/>
+          <form action="/" method="post" role="form">
+            <input name="name" type="text" placeholder="Name" required/>
+            <br/><br/>
+            <input name="email" type="email" placeholder="Email" required/>
+            <br/><br/>
+            <input name="mobile" type="number" placeholder="Phone Number" required/>
+            <br/><br/>
+            <textarea name="message" placeholder="Enter Your Message Here....." required></textarea>
+            <br/><br/>
+            <button type="submit">Submit Message</button>            
+          </form>
+
+          <br/><br/>
+
+          <div class="container address">
+            <h1>Address</h1>
+            <br/><br/>
+            <div class="row">
+              <div class="column column-left">
+                <address>
+                  Vipin Kumar,<br/>
+                  VPO - Alahar,<br/>
+                  District - Yamuna Nagar,<br/>
+                  State - Haryana, <br/>
+                  India
+                </address>
+              </div>
+              <div class="column column-right">
+                <address>
+                  Mobile - <a href="tel: +919813806752">0091 9813806752</a> <br/>
+                  Email - <a href="mailto:vipinkmboj@gmail.com">vipinkmboj@gmail.com</a>  <br/>
+                  website - <a href="https://www.vipin.website">www.vipin.website</a>
+                </address>
+              </div>
+            </div>
+          </div>
+          
+
+         
+
         </div>
         
         
