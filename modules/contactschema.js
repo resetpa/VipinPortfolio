@@ -1,3 +1,4 @@
+/*
 const mongoose = require('mongoose');
 
 //dot env configuration
@@ -9,6 +10,7 @@ if (process.env.NODE_ENV !== 'production'){
 }
 */
 //console.log(dotenv.parsed);
+/*
 mongoose.connect('mongodb+srv://process.env.MONGODB_DATA_USER_USERNAME:process.env.MONGODB_DATA_USER_PASSWORD@clustervipinportfolioo.s0tle.mongodb.net/vipinportfolio?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true//, useCreateIndex: true
 });
 var conn = mongoose.Collection;
@@ -39,4 +41,4 @@ var contactPersonSchema = new mongoose.Schema({
 
 var contactPersonModel = mongoose.model('contactpersondetails', contactPersonSchema)
 module.exports = contactPersonModel;
-
+*/
