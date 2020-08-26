@@ -3,14 +3,14 @@ var router = express.Router();
 
 
 //Contact form coding below some error in below line bro.....
-var contactPersonModel = require('../modules/contactschema');
+//var contactPersonModel = require('../modules/contactschema');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Vipin Portfolio Website', msg: '' });
 });
 
-
+/*
 router.post('/', function(req, res, next) {
   var contactName = req.body.name;
   var contactEmail = req.body.email;
@@ -29,5 +29,5 @@ router.post('/', function(req, res, next) {
   });
   
 });
-
+*/
 module.exports = router;
